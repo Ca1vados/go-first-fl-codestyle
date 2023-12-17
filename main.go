@@ -25,9 +25,11 @@ func attack(charName, charClass string) string {
 func defence(charName, charClass string) string {
 	if charClass == "warrior" {
 		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randint(5, 10))
-	} else if charClass == "mage" {
+	}
+	if charClass == "mage" {
 		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randint(-2, 2))
-	} else if charClass == "healer" {
+	}
+	if charClass == "healer" {
 		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randint(2, 5))
 	}
 	return "неизвестный класс персонажа"
